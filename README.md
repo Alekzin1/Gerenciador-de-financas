@@ -18,21 +18,17 @@
 ## 4.3 Descrição do Problema
 O controle financeiro pessoal exige o cálculo constante de variáveis dinâmicas que se alteram a cada nova entrada (receita) ou saída (despesa) de capital. Pequenos descompassos e a falta de visualização em tempo real do impacto dos gastos sobre a renda total geram endividamento e descontrole orçamentário. 
 
-O problema consiste em construir um motor de backend robusto, baseado em console, capaz de centralizar dados de transações, calcular instantaneamente proporções de gastos em relação à renda total e disparar gatilhos visuais de segurança (alertas de criticidade) assim que limites prudenciais forem violados, sem depender de uma camada de interface gráfica complexa.
+O problema consiste em desenvolver um programa de terminal simples e eficiente, capaz de registrar as movimentações financeiras diárias, calcular o saldo atual e avisar o usuário caso ele gaste mais do que uma meta segura, ajudando no controle do orçamento pessoal.
 
 ---
 
 ## 4.4 Objetivo do Programa
-O sistema se propõe a atuar como um núcleo de processamento financeiro estruturado. Ele captura inputs do usuário através da linha de comando, armazena as informações temporariamente em coleções de objetos indexados em memória, computa agregados aritméticos de saldo e porcentagem de comprometimento e emite relatórios tabulares de extrato e alertas automáticos de risco orçamentário.
+O programa tem o objetivo de funcionar como um gerenciador financeiro acessível. Ele recebe os dados digitados pelo usuário, salva as informações em uma lista de dicionários enquanto o programa estiver rodando, calcula os totais e mostra alertas de risco na tela."
 
 ---
 
 ## 4.5 Descrição Geral da Solução
-A solução foi inteiramente desenvolvida utilizando a linguagem **Python 3**, adotando o paradigma de **programação estruturada modular**. 
-
-Os dados de cada transação são encapsulados em dicionários (`dict`) contendo chaves para propriedades específicas, os quais são armazenados sequencialmente em uma lista dinâmica principal (`list`), simulando o comportamento de uma tabela de banco de dados relacional. 
-
-Toda a lógica de atualização baseia-se em funções puras de computação de dados. O fluxo principal é mantido por uma estrutura de repetição contínua (`while`) que atua como o roteador de comandos do sistema, avaliando as escolhas por meio de condicionais encadeadas.
+O sistema foi desenvolvido em Python utilizando funções para dividir e organizar o código. Cada transação é guardada como um dicionário, e todos esses dicionários ficam salvos dentro de uma lista principal. O menu do sistema roda dentro de um laço 'while' que só fecha quando o usuário pede
 
 ---
 
@@ -43,7 +39,7 @@ O código-fonte está organizado de forma modular através das seguintes funçõ
 * `exibir_resumo()`: Atua como a camada de saída do dashboard no terminal. Exibe os resultados matemáticos processados e executa condicionais de segurança para exibição de alertas de risco.
 * `registrar_transacao()`: Camada de input de dados do sistema. Realiza a captura de strings e floats, aplica regras de validação contra campos nulos, trata erros de conversão de tipos e faz o append do novo registro na lista.
 * `extrato_detalhado()`: Itera sobre os registros armazenados e gera uma saída formatada em colunas alinhadas, simulando uma tabela pura de banco de dados.
-* `ejecutar_sistema()`: Orquestrador central e ponto de entrada da aplicação, contendo o loop principal (`Main Loop`) e o tratamento de rotas do menu.
+* `executar_sistema()`: Orquestrador central e ponto de entrada da aplicação, contendo o loop principal (`Main Loop`) e o tratamento de rotas do menu.
 
 ---
 
