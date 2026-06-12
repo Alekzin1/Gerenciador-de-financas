@@ -1,6 +1,5 @@
 # Gerenciador-de-financas
 
-# CoreFin: Motor de Processamento e Gerenciamento de Fluxo de Caixa
 
 ## 4.1 Identificação
 * **Nome completo do aluno:** Alexandre de Souza Mariano
@@ -11,12 +10,11 @@
 ---
 
 ## 4.2 Título do Projeto
-**CoreFin - Sistema  de Finanças Pessoais via Terminal (Backend Engine)**
+** Sistema  de Finanças Pessoais via Terminal (Backend Engine)**
 
 ---
 
 ## 4.3 Descrição do Problema
-O controle financeiro pessoal exige o cálculo constante de variáveis dinâmicas que se alteram a cada nova entrada (receita) ou saída (despesa) de capital. Pequenos descompassos e a falta de visualização em tempo real do impacto dos gastos sobre a renda total geram endividamento e descontrole orçamentário. 
 
 O problema consiste em desenvolver um programa de terminal simples e eficiente, capaz de registrar as movimentações financeiras diárias, calcular o saldo atual e avisar o usuário caso ele gaste mais do que uma meta segura, ajudando no controle do orçamento pessoal.
 
