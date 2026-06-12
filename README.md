@@ -81,7 +81,7 @@ O fluxo de execução do sistema segue a ordem lógica abaixo:
 
 ### Tratamento de Exceções e Validação de Tipos
 O bloco abaixo demonstra o tratamento robusto do backend para evitar falhas de execução (*runtime errors*) caso o usuário insira letras no campo numérico:
-`
+```
 try:
     valor = float(input("Valor da transação: R$ "))
     if valor <= 0:
@@ -89,11 +89,9 @@ try:
         return
 except ValueError:
     print("Erro: Valor numérico inválido. Use pontos para centavos (Ex: 150.50).")
-    return`
+    return
 
-   ### Lógica de ID Incremental Dinâmico
-Para simular uma chave primária autoincrementável de banco de dados sem correr o risco de duplicar IDs, o sistema avalia o último índice de forma dinâmica: 
-`novo_id = transacoes[-1]["id"] + 1 if transacoes else 1`
+
 
 
  
